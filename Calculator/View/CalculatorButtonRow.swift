@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CalculatorButtonRow: View {
+    //@Binding var brain: CalculatorBrain
+    @EnvironmentObject
+    var model: CalculatorModel
     let row: [CalculatorButtonItem]
     var body: some View {
         HStack(){
@@ -16,14 +19,11 @@ struct CalculatorButtonRow: View {
              由于CalculatorButtonItem不满足Identifier，但是可以让自身作为Hashable 并在keyPath 传入自身
              */
             ForEach(row,id: \.self) { item in
-                CalculatorButton(title: item.title, size: item.size, forgroundColor: item.forgroundColor, backgroundColor: item.backgroundColor)
+                CalculatorButton(title: item.title, size: item.size, forgroundColor: item.forgroundColor, backgroundColor: item.backgroundColor) {
+                    model.apply(item)
+                }
             }
         }
     }
 }
 
-struct CalculatorButtonRow_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorButtonRow(row: [.digit(1),.digit(2),.digit(3),.op(.plus)])
-    }
-}

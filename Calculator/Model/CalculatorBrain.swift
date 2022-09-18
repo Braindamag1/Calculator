@@ -60,7 +60,12 @@ enum CalculatorBrain {
         case .left(let left):
             return .left(left.apply(num: num))
         case .leftOp(let left, let op):
-            return .leftOpRight(left: left, op: op, right: "0".apply(num: num))
+            switch op {
+            case .equal:
+                return .left("0".apply(num: num))
+            default:
+                return .leftOpRight(left: left, op: op, right: "0".apply(num: num))
+            }
         case .leftOpRight(let left, let op, let right):
             return .leftOpRight(left: left, op: op, right: right.apply(num: num))
         case .error:
@@ -107,10 +112,12 @@ enum CalculatorBrain {
             case .plus,.minus,.multiply,.divide:
                 if let res =  op.calculate(l: left, r: right) {
                     return .leftOp(left: res, op: op)
+                } else {
+                    return .error
                 }
             case .equal:
                 if let res = currentOp.calculate(l: left, r: right) {
-                    return .left(res)
+                    return .leftOp(left: res, op: op)
                 } else {
                     return .error
                 }
@@ -123,7 +130,16 @@ enum CalculatorBrain {
     private func apply(command: CalculatorButtonItem.Command)-> CalculatorBrain {
         switch command {
         case .percent:
-            <#code#>
+            switch self {
+            case .left(let left):
+                return .left(left.percentaged())
+            case .leftOp(let left, let op):
+                return self
+            case .leftOpRight(let left, let op, let right):
+                return .leftOpRight(left: left, op: op, right: right.percentaged())
+            case .error:
+                return .left("-0")
+            }
         case .flip:
             switch self {
             case .left(let left):

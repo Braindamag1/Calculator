@@ -17,6 +17,8 @@
 		4199271728D5E885001950AE /* CalculatorButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199271628D5E885001950AE /* CalculatorButtonRow.swift */; };
 		4199271928D5EC1A001950AE /* CalculatorButtonPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199271828D5EC1A001950AE /* CalculatorButtonPad.swift */; };
 		4199271B28D5F7D5001950AE /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199271A28D5F7D5001950AE /* CalculatorBrain.swift */; };
+		4199271D28D71458001950AE /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199271C28D71458001950AE /* CalculatorModel.swift */; };
+		4199271F28D7313F001950AE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199271E28D7313F001950AE /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		4199271628D5E885001950AE /* CalculatorButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonRow.swift; sourceTree = "<group>"; };
 		4199271828D5EC1A001950AE /* CalculatorButtonPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonPad.swift; sourceTree = "<group>"; };
 		4199271A28D5F7D5001950AE /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		4199271C28D71458001950AE /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		4199271E28D7313F001950AE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				4199271128D5E443001950AE /* Constants.swift */,
 				4199270E28D5E431001950AE /* CalculatorButtonItem.swift */,
 				4199271A28D5F7D5001950AE /* CalculatorBrain.swift */,
+				4199271C28D71458001950AE /* CalculatorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 				4199271428D5E5A0001950AE /* CalculatorButton.swift */,
 				4199271628D5E885001950AE /* CalculatorButtonRow.swift */,
 				4199271828D5EC1A001950AE /* CalculatorButtonPad.swift */,
+				4199271E28D7313F001950AE /* HistoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 				4199271228D5E443001950AE /* Constants.swift in Sources */,
 				4199271728D5E885001950AE /* CalculatorButtonRow.swift in Sources */,
 				4199271528D5E5A0001950AE /* CalculatorButton.swift in Sources */,
+				4199271D28D71458001950AE /* CalculatorModel.swift in Sources */,
+				4199271F28D7313F001950AE /* HistoryView.swift in Sources */,
 				4199271B28D5F7D5001950AE /* CalculatorBrain.swift in Sources */,
 				4199271928D5EC1A001950AE /* CalculatorButtonPad.swift in Sources */,
 			);

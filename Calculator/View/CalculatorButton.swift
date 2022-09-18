@@ -13,9 +13,10 @@ struct CalculatorButton: View {
     var forgroundColor: Color
     var backgroundColor: Color
     var fontSize: CGFloat = 38
+    var action:()->Void
     var body: some View {
         Button {
-            print(title)
+           action()
         } label: {
             Text(title)
                 .font(.system(size: fontSize))
@@ -28,8 +29,3 @@ struct CalculatorButton: View {
     }
 }
 
-struct CalculatorButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorButton(title: "+", size: .init(width: 88, height: 88), forgroundColor: .white, backgroundColor: operatorColor, fontSize: 38)
-    }
-}

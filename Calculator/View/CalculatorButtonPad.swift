@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CalculatorButtonPad: View {
+    //@Biinding 将值语意的属性转换为引用寓意
+    //@Binding var brain: CalculatorBrain
+    //var model: CalculatorModel
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear),.command(.flip),.command(.percent),.op(.divide)],
         [.digit(7),.digit(8),.digit(9),.op(.multiply)],
@@ -26,8 +29,3 @@ struct CalculatorButtonPad: View {
     }
 }
 
-struct CalculatorButtonPad_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorButtonPad()
-    }
-}
